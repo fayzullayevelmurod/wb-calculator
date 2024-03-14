@@ -89,6 +89,10 @@ body {
 	@apply h-[46px];
 }
 
+.sellect-dropdown.active .select-input {
+	@apply border-[#C4B5FD];
+}
+
 .sellect-dropdown::before {
 	@apply content-[url("../images/icons/arrow-down.svg")] z-50 absolute right-[20px] top-[35%] translate-y-[-50%] w-[12px] h-[12px];
 }
@@ -101,8 +105,6 @@ body {
 	@apply rotate-180 top-[62%]
 }
 
-.sellect-dropdown.active input {
-	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
-	border-bottom: 0;
+.open-box.active svg {
+	@apply rotate-0
 }
