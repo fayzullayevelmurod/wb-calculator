@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply font-Inter font-normal text-base leading-6 bg-gray;
+}
+
+.container {
+	@apply max-w-[1424px] mx-auto;
+}
+
+.btn {
+	@apply bg-purple rounded-md px-7 py-[13px] text-white hover:opacity-[75%] duration-200;
+}
+
+.btn-outline {
+	@apply bg-transparent rounded-md px-7 py-[13px] text-purple border border-purple hover:bg-[#a474f7] hover:border-transparent hover:text-white duration-200;
+}
+
+.btn.focus,
+.btn:focus {
+	@apply shadow-none;
+}
+
+.copy-btn:hover svg path {
+	@apply stroke-purple
+}
+
+.copy-btn:focus svg path {
+	@apply stroke-green
+}
+
+.trash-btn:hover svg path {
+	@apply stroke-white
+}
+
+.download-btn:hover svg path {
+	@apply stroke-white;
+}
+.download-btn:focus svg path {
+	@apply stroke-white;
+}
