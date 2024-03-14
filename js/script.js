@@ -36,11 +36,24 @@ document.addEventListener('DOMContentLoaded', () => {
 	// accordion
 	const openBtn = document.querySelector('.open-box');
 	const contentBox = document.querySelector(".content-box");
-	console.log(contentBox);
 	openBtn.addEventListener("click", () => {
 		contentBox.classList.toggle('h-0');
 		openBtn.classList.toggle('active');
-		console.log(openBtn);
 	});
+
+	const accordion = document.querySelectorAll('.accordion');
+
+	accordion.forEach((el) => {
+		const accordionHeader = el.querySelector('.accordion-header');
+		const accordionHeaderIconPlus = el.querySelector('.accordion-header__icon-plus');
+		const accordionHeaderIconMinus = el.querySelector('.accordion-header__icon-minus');
+		const accordionContent = el.querySelector('.accordion-content');
+		console.log(accordionHeader);
+		accordionHeader.addEventListener('click', () => {
+			accordionHeaderIconPlus.classList.toggle('hidden');
+			accordionHeaderIconMinus.classList.toggle('hidden');
+			accordionContent.classList.toggle('hidden');
+		})
+	})
 
 })

@@ -7,7 +7,8 @@ module.exports = {
 				"Inter": ["Inter", "sans-serif"]
 			},
 			backgroundImage: {
-				"hero-bg": "url(../images/hero-bg.png)"
+				"hero-bg": "url(../images/hero-bg.png)",
+				"chat-bg": "url(../images/chat-bg.svg)"
 			},
 			colors: {
 				"purple": "#8646F4",
