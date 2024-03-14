@@ -6,41 +6,54 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<!-- Inter font -->
-	<link rel="stylesheet" href="fonts/Inter/stylesheet.css">
+	<link rel="stylesheet" href="fonts/web/inter.css">
 	<!-- custom css link -->
 	<link rel="stylesheet" href="css/output.css">
 </head>
 
 <body>
 
-	<div class="overflow-hidden">
+	<div class="overflow-hidden relative">
 
 		<!-- main -->
 		<main>
 
-			<section class="bg-hero-bg bg-no-repeat bg-cover bg-center pb-[212px]">
+			<section class="md:bg-hero-bg bg-purple bg-no-repeat bg-cover bg-center pb-[102px] md:pb-[212px]">
 				<!-- header -->
-				<header class="bg-purple pt-8 px-8 pb-[22px]">
-					<div class="container flex items-center justify-between">
-						<a href="#!">
-							<img src="images/icons/company-logo.svg" alt="company-logo" width="227" height="15">
-						</a>
+				<header class="bg-purple md:pt-8 992:px-8 md:pb-[22px] py-[14px]">
+					<div class="container flex items-center md:justify-normal justify-between">
+						<div class="flex items-center gap-4">
+							<button class="md:hidden menu-btn space-y-1">
+								<span class="w-[18px] duration-200 transition-all h-[1.5px] bg-white rounded-full block"></span>
+								<span class="w-[18px] duration-200 transition-all h-[1.5px] bg-white rounded-full block"></span>
+								<span class="w-[9px] h-[1.5px] bg-[#DDD6FE] rounded-full block"></span>
+							</button>
+							<a href="#!">
+								<img class="md:w-[227px] w-[143px] h-[10px] md:h-[15px] " src="images/icons/company-logo.svg"
+									alt="company-logo" width="227" height="15">
+							</a>
+						</div>
 
-						<nav>
-							<ul class="flex gap-10">
+						<nav
+							class="nav md:relative absolute md:top-auto md:left-auto top-[63px] md:bg-transparent bg-[#4F3F6ACC] md:w-auto w-full md:min-h-fit md:h-auto min-h-lvh h-full z-50 mx-0 -left-full duration-300 transition-all md:mx-auto">
+							<ul
+								class="flex md:bg-transparent relative md:min-h-fit md:h-fit min-h-lvh h-full md:w-auto w-[324px] bg-white md:flex-row flex-col md:gap-10 gap-1 md:pt-0 m-0 md:p-auto pt-6 px-3">
 								<li>
-									<a class="font-medium text-lg text-white leading-6" href="#!">Складчина MPSTATS</a>
+									<a class="md:font-medium font-normal md:text-lg text-sm leading-[22px] md:text-white text-dark-3 md:leading-6 md:p-0 py-[5px] pl-2 md:hover:bg-transparent md:rounded-none md:w-auto md:inline-block block w-full hover:bg-purple-light rounded-md"
+										href="#!">Складчина MPSTATS</a>
 								</li>
 								<li>
-									<a class="font-medium text-lg text-white leading-6" href="#!">Комиссии</a>
+									<a class="md:font-medium font-normal md:text-lg text-sm leading-[22px] md:text-white text-dark-3 md:leading-6 md:p-0 py-[5px] pl-2 md:hover:bg-transparent md:rounded-none md:w-auto md:inline-block block w-full hover:bg-purple-light rounded-md"
+										href="#!">Комиссии</a>
 								</li>
 								<li>
-									<a class="font-medium text-lg text-white leading-6" href="#!">Блог</a>
+									<a class="md:font-medium font-normal md:text-lg text-sm leading-[22px] md:text-white text-dark-3 md:leading-6 md:p-0 py-[5px] pl-2 md:hover:bg-transparent md:rounded-none md:w-auto md:inline-block block w-full hover:bg-purple-light rounded-md"
+										href="#!">Блог</a>
 								</li>
 							</ul>
 						</nav>
 
-						<div class="flex">
+						<div class="flex 992:max-w-[227px] 992:w-full justify-end">
 							<div class="bg-[#FFFFFF33] rounded-[4px] p-[10px] cursor-pointer">
 								<img src="images/icons/sun.svg" alt="sun" width="16" height="16">
 							</div>
@@ -51,13 +64,16 @@
 					</div>
 				</header>
 
-				<div class="container pt-[62px] text-center">
+				<div class="container sm:pt-[62px] pt-8 text-center">
 					<div class="max-w-[666px] mx-auto text-white">
-						<h2 class="font-bold leading-[58px] text-5xl">Калькулятор Wildberries для поставщиков</h2>
-						<p class="leading-6 text-lg mt-4 mb-8">Калькулятор цены товара и размера скидки на Вайлдберриз для продавцов
+						<h2 class="font-bold sm:leading-[58px] sm:text-5xl text-2xl leading-[30px]">Калькулятор Wildberries для
+							поставщиков</h2>
+						<p class="leading-6 sm:text-lg text-base mt-4 sm:mb-8 mb-6">Калькулятор цены товара и размера скидки на
+							Вайлдберриз
+							для продавцов
 							рассчитывает конечную стоимость товаров с учётом
 							комиссии, всех скидок, хранения товаров в 2024 году.</p>
-						<div class="flex justify-center gap-4">
+						<div class="flex justify-center gap-4 flex-wrap">
 							<a class="rounded-full py-[13px] px-7 bg-white leading-6 font-medium text-purple" href="#!">Приступить к
 								расчету</a>
 							<button class="flex items-center gap-[10px]">
@@ -69,21 +85,27 @@
 				</div>
 			</section>
 
-			<section class="mt-[-9.2rem]">
+			<section class="md:mt-[-9.2rem] mt-[-50px]">
 				<div class="container">
 					<div
-						class="bg-white rounded-[20px] pl-8 pr-[58px] py-[38px] flex items-center gap-9 justify-between relative">
-						<button class="absolute top-[14px] right-[14px] hover:rotate-180 duration-300">
-							<img src="images/icons/close.svg" alt="close icon" width="37" height="37">
+						class="bg-white flex-wrap rounded-[20px] sm:pl-8 p-4 sm:pr-[58px] sm:py-[38px] flex items-center gap-4 justify-between relative">
+						<button class="close-btn absolute top-[14px] right-[14px] hover:rotate-180 duration-300">
+							<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11.849 24.5771L24.5769 11.8492" stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<path d="M24.5769 24.5771L11.849 11.8492" stroke="#BDBDBD" stroke-width="1.5" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
 						</button>
-						<div class="max-w-[758px]">
-							<h3 class="text-3xl leading-[38px] font-semibold text-dark">Складчина <span
+						<div class="1440:max-w-[758px] sm:max-w-[515px] max-w-full">
+							<h3 class="sm:text-3xl text-2xl leading-[30px] sm:leading-[38px] font-semibold text-dark">Складчина <span
 									class="text-[#21ad5c]">MpStats</span> от
 								2000₽/мес</h3>
-							<p class="text-lg leading-26 pt-4 pb-6 max-w-[80%] w-full">Получите личный доступ в MPStats с тарифом
+							<p class="sm:text-lg text-base leading-6 sm:leading-26 pt-4 pb-6 md:max-w-[80%] md:w-full">Получите личный
+								доступ в MPStats с тарифом
 								«‎Корпоративный»
 								для глубокого анализа карточки товара на WildBerries и OZON.</p>
-							<div class="flex gap-4">
+							<div class="flex gap-4 items-center sm:justify-normal justify-between flex-wrap">
 								<a class="btn" href="#!">Тарифы</a>
 								<a class="btn" href="#!">Другие сервисы</a>
 								<a class="btn-outline" href="#!">Связаться</a>
@@ -97,8 +119,8 @@
 									Яндекс Маркет.</p>
 							</div>
 						</div>
-						<img src="images/statistics-img.png" alt="statistics-img" width="260" height="230">
-						<ul>
+						<img class="sm:block hidden" src="images/statistics-img.png" alt="statistics-img" width="260" height="230">
+						<ul class="sm:mt-0 mt-6">
 							<li class="flex items-center gap-[10px] text-dark font-medium leading-6 mb-3">
 								<img src="images/icons/check.svg" alt="check" width="16" height="16">
 								<span>Профессиональный тариф;</span>
@@ -133,15 +155,16 @@
 			</section>
 
 			<!-- form section -->
-			<section class="mt-[30px]">
+			<section class="form-section mt-[30px]">
 				<div class="container">
-					<div class="bg-white p-8 rounded-[20px]">
-						<div class="flex justify-between items-center">
-							<h5 class="text-dark text-lg leading-26 font-medium">Калькулятор расчета юнит экономики Вайлдберриз
+					<div class="bg-white md:p-8 p-4 md:rounded-[20px] rounded-2xl">
+						<div class="flex justify-between items-center flex-wrap gap-y-6">
+							<h5 class="text-dark sm:text-lg text-base sm:text-left text-center leading-26 font-medium">Калькулятор
+								расчета юнит экономики Вайлдберриз
 							</h5>
-							<div class="flex gap-4">
+							<div class="flex gap-4 flex-wrap">
 								<button
-									class="copy-btn flex items-center gap-2 group hover:bg-purple-light hover:text-purple duration-200 focus:bg-green-light focus:text-green px-6 py-3 rounded-md">
+									class="copy-btn md:w-auto w-full md:text-left md:justify-start justify-center text-center flex items-center gap-2 group hover:bg-purple-light hover:text-purple duration-200 focus:bg-green-light focus:text-green px-6 py-3 rounded-md">
 									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path
 											d="M13.3333 10.75V14.25C13.3333 17.1667 12.1666 18.3334 9.24996 18.3334H5.74996C2.83329 18.3334 1.66663 17.1667 1.66663 14.25V10.75C1.66663 7.83335 2.83329 6.66669 5.74996 6.66669H9.24996C12.1666 6.66669 13.3333 7.83335 13.3333 10.75Z"
@@ -153,7 +176,7 @@
 									<span>Поделиться калькулятором</span>
 								</button>
 								<button
-									class="trash-btn flex items-center gap-2 group bg-red-light-6 text-red-light-2 hover:bg-red hover:text-white duration-200 px-6 py-3 rounded-md">
+									class="trash-btn md:w-auto w-full md:text-left md:justify-start justify-center text-center flex items-center gap-2 group bg-red-light-6 text-red-light-2 hover:bg-red hover:text-white duration-200 px-6 py-3 rounded-md">
 									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path
 											d="M17.5 4.98335C14.725 4.70835 11.9333 4.56668 9.15 4.56668C7.5 4.56668 5.85 4.65001 4.2 4.81668L2.5 4.98335"
@@ -172,7 +195,7 @@
 									<span>Очистить данные</span>
 								</button>
 								<button
-									class="download-btn text-secondary bg-gray-3 flex items-center gap-2 group focus:bg-primary hover:opacity-[75%] hover:bg-primary hover:text-white duration-200 focus:text-white px-6 py-3 rounded-md">
+									class="download-btn md:w-auto w-full md:text-left md:justify-start justify-center text-center text-secondary bg-gray-3 flex items-center gap-2 group focus:bg-primary hover:opacity-[75%] hover:bg-primary hover:text-white duration-200 focus:text-white px-6 py-3 rounded-md">
 									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path
 											d="M13.7 7.41666C16.7 7.67499 17.925 9.21666 17.925 12.5917V12.7C17.925 16.425 16.4333 17.9167 12.7083 17.9167H7.28332C3.55832 17.9167 2.06665 16.425 2.06665 12.7V12.5917C2.06665 9.24166 3.27498 7.69999 6.22498 7.42499"
@@ -186,9 +209,10 @@
 								</button>
 							</div>
 						</div>
-						<div class="mt-4">
+						<div class="sm:mt-4 mt-6">
 							<h6 class="form-title">Ваш товар</h6>
-							<div class="flex justify-between gap-4">
+							<div
+								class="flex justify-between gap-4 gap-y-[6px] flex-wrap sm:pb-0 sm:border-none border-b border-[#ddd6fe] pb-[23px]">
 								<div class="flex-1">
 									<div class="flex items-center my-[10px]">
 										<p class="form-info">Предмет</p>
@@ -197,7 +221,7 @@
 											<div class="relative cursor-pointer group">
 												<img src="images/icons/question.svg" alt="">
 												<div
-													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 													<div class="relative py-[5px] px-[14px]">
 														<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45">
 														</div>
@@ -208,7 +232,7 @@
 												</div>
 											</div>
 											<div
-												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 												<div class="relative py-[5px] px-[14px]">
 													<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 													<p class="text-sm leading-[20px] text-white">
@@ -262,13 +286,13 @@
 									<input class="form-input" type="text">
 								</div>
 							</div>
-							<div class="flex gap-[6px] mt-8">
+							<div class="flex gap-[6px] sm:mt-8 mt-6">
 								<h6 class="form-title">Фулфилмент</h6>
 								<div class="relative cursor-pointer group">
 									<div class="relative cursor-pointer group">
 										<img src="images/icons/question.svg" alt="">
 										<div
-											class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+											class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 											<div class="relative py-[5px] px-[14px]">
 												<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 												<p class="text-sm leading-[20px] text-white">
@@ -278,7 +302,7 @@
 										</div>
 									</div>
 									<div
-										class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+										class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 										<div class="relative py-[5px] px-[14px]">
 											<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 											<p class="text-sm leading-[20px] text-white">
@@ -288,7 +312,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="flex justify-between gap-4">
+							<div
+								class="flex justify-between gap-4 gap-y-[6px] flex-wrap sm:pb-0 pb-[23px] sm:border-none border-b border-[#ddd6fe]">
 								<div class="flex-1">
 									<div class="flex items-center my-[10px] gap-[6px]">
 										<p class="form-info">Логистика от произ., ₽</p>
@@ -296,7 +321,7 @@
 											<div class="relative cursor-pointer group">
 												<img src="images/icons/question.svg" alt="">
 												<div
-													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 													<div class="relative py-[5px] px-[14px]">
 														<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45">
 														</div>
@@ -307,7 +332,7 @@
 												</div>
 											</div>
 											<div
-												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 												<div class="relative py-[5px] px-[14px]">
 													<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 													<p class="text-sm leading-[20px] text-white">
@@ -326,7 +351,7 @@
 											<div class="relative cursor-pointer group">
 												<img src="images/icons/question.svg" alt="">
 												<div
-													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 													<div class="relative py-[5px] px-[14px]">
 														<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45">
 														</div>
@@ -337,7 +362,7 @@
 												</div>
 											</div>
 											<div
-												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 												<div class="relative py-[5px] px-[14px]">
 													<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 													<p class="text-sm leading-[20px] text-white">
@@ -356,7 +381,7 @@
 											<div class="relative cursor-pointer group">
 												<img src="images/icons/question.svg" alt="">
 												<div
-													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 													<div class="relative py-[5px] px-[14px]">
 														<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45">
 														</div>
@@ -367,7 +392,7 @@
 												</div>
 											</div>
 											<div
-												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 												<div class="relative py-[5px] px-[14px]">
 													<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 													<p class="text-sm leading-[20px] text-white">
@@ -386,7 +411,7 @@
 											<div class="relative cursor-pointer group">
 												<img src="images/icons/question.svg" alt="">
 												<div
-													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 													<div class="relative py-[5px] px-[14px]">
 														<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45">
 														</div>
@@ -397,7 +422,7 @@
 												</div>
 											</div>
 											<div
-												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 												<div class="relative py-[5px] px-[14px]">
 													<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 													<p class="text-sm leading-[20px] text-white">
@@ -410,12 +435,12 @@
 									<input class="form-input" type="text" placeholder="Стоимость упаковки за 1 ед.">
 								</div>
 							</div>
-							<div class="flex gap-4 mt-8 mb-[10px]">
+							<div class="flex gap-4 flex-wrap mt-8 mb-[10px]">
 								<h6 class="form-title">Маркетплейс</h6>
 								<p class="form-info">Используются данные по складам за  12 марта 2024г.</p>
 							</div>
-							<div class="flex justify-between gap-4">
-								<div class="flex-1 max-w-[328px]">
+							<div class="flex justify-between gap-4 gap-y-[6px] flex-wrap">
+								<div class="flex-1 min-w-[328px]">
 									<div class="flex my-[10px]">
 										<p class="form-info">Склад отгрузки</p>
 										<img class="form-star" src="images/icons/form-star.svg" alt="form-star" width="">
@@ -423,7 +448,7 @@
 											<div class="relative cursor-pointer group">
 												<img src="images/icons/question.svg" alt="">
 												<div
-													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 													<div class="relative py-[5px] px-[14px]">
 														<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45">
 														</div>
@@ -434,7 +459,7 @@
 												</div>
 											</div>
 											<div
-												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 												<div class="relative py-[5px] px-[14px]">
 													<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 													<p class="text-sm leading-[20px] text-white">
@@ -473,14 +498,26 @@
 										</div>
 									</div>
 								</div>
-								<div class="flex-1 max-w-[210px] items-center w-full">
-									<div class="flex items-center my-[10px] gap-[6px]">
-										<p class="form-info">Комиссия WB, %</p>
-										<div class="relative cursor-pointer group">
+								<div class="flex gap-4">
+									<div class="flex-1 min-w-[210px] sm:max-w-fit max-w-[210px]">
+										<div class="flex items-center my-[10px] gap-[6px]">
+											<p class="form-info">Комиссия WB, %</p>
 											<div class="relative cursor-pointer group">
-												<img src="images/icons/question.svg" alt="">
+												<div class="relative cursor-pointer group">
+													<img src="images/icons/question.svg" alt="">
+													<div
+														class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
+														<div class="relative py-[5px] px-[14px]">
+															<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45">
+															</div>
+															<p class="text-sm leading-[20px] text-white">
+																Является не обязательным для заполнения блоком
+															</p>
+														</div>
+													</div>
+												</div>
 												<div
-													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 													<div class="relative py-[5px] px-[14px]">
 														<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45">
 														</div>
@@ -490,24 +527,15 @@
 													</div>
 												</div>
 											</div>
-											<div
-												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
-												<div class="relative py-[5px] px-[14px]">
-													<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
-													<p class="text-sm leading-[20px] text-white">
-														Является не обязательным для заполнения блоком
-													</p>
-												</div>
-											</div>
 										</div>
+										<input class="form-input" type="text" disabled placeholder="0">
 									</div>
-									<input class="form-input" type="text" disabled placeholder="0">
-								</div>
-								<div class="flex-1 max-w-[102px] w-full">
-									<div class="flex my-[10px]">
-										<p class="form-info">В рублях</p>
+									<div class="flex-1 480:min-w-[102px] 1440:w-full min-w-[102px]">
+										<div class="flex my-[10px]">
+											<p class="form-info">В рублях</p>
+										</div>
+										<input class="form-input" type="text" disabled placeholder="0">
 									</div>
-									<input class="form-input" type="text" disabled placeholder="0">
 								</div>
 								<div class="flex-1">
 									<div class="flex my-[10px] gap-[6px] items-center">
@@ -516,7 +544,7 @@
 											<div class="relative cursor-pointer group">
 												<img src="images/icons/question.svg" alt="">
 												<div
-													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 													<div class="relative py-[5px] px-[14px]">
 														<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45">
 														</div>
@@ -527,7 +555,7 @@
 												</div>
 											</div>
 											<div
-												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 												<div class="relative py-[5px] px-[14px]">
 													<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 													<p class="text-sm leading-[20px] text-white">
@@ -537,30 +565,35 @@
 											</div>
 										</div>
 									</div>
-									<div class="flex gap-4">
-										<input class="form-input max-w-[134px]" type="text" placeholder="Длина, см">
-										<input class="form-input max-w-[134px]" type="text" placeholder="Ширина, см">
-										<input class="form-input max-w-[134px]" type="text" placeholder="Высота, см ">
-										<input class="form-input max-w-[102px]" type="text" placeholder="Вес, кг">
+									<div class="flex md:flex-nowrap flex-wrap gap-4">
+										<input class="form-input 480:min-w-[134px] 480:max-w-fit max-w-[155px]" type="text"
+											placeholder="Длина, см">
+										<input class="form-input 480:min-w-[134px] 480:max-w-fit max-w-[155px]" type="text"
+											placeholder="Ширина, см">
+										<input class="form-input 480:min-w-[134px] 480:max-w-fit max-w-[155px]" type="text"
+											placeholder="Высота, см ">
+										<input class="form-input 480:min-w-[102px] 480:max-w-fit max-w-[155px]" type="text"
+											placeholder="Вес, кг">
 									</div>
 								</div>
-								<div>
+								<div class="flex-1">
 									<div class="flex my-[10px]">
 										<p class="form-info">В рублях</p>
 									</div>
 									<div class="flex gap-4">
-										<input class="form-input max-w-[102px]" type="text" placeholder="0" disabled>
+										<input class="form-input min-w-[102px]" type="text" placeholder="0" disabled>
 									</div>
 								</div>
 							</div>
-							<div class="flex justify-between gap-4 mt-[6px]">
-								<div class="flex-1 items-center max-w-[210px]">
+							<div
+								class="flex justify-between gap-4 mt-[6px] flex-wrap sm:pb-0 pb-[23px] sm:border-none border-b border-[#ddd6fe]">
+								<div class="flex-1 1440:max-w-[210px] sm:max-w-fit max-w-[205px] 1440:min-w-[auto] sm:min-w-[210px]">
 									<div class="flex my-[10px] gap-[6px] items-center">
 										<p class="form-info">Брак, %</p>
 										<div class="relative cursor-pointer group">
 											<img src="images/icons/question.svg" alt="">
 											<div
-												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 												<div class="relative py-[5px] px-[14px]">
 													<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 													<p class="text-sm leading-[20px] text-white">
@@ -572,20 +605,21 @@
 									</div>
 									<input class="form-input" type="text" placeholder="2">
 								</div>
-								<div class="flex-1 max-w-[102px] items-center w-full">
+								<div
+									class="flex-1 sm:max-w-fit max-w-[102px] 1440:max-w-[102px] 1440:min-w-[auto] sm:min-w-[102px] items-center 1440:w-full">
 									<div class="flex my-[10px]">
 										<p class="form-info">В рублях</p>
 									</div>
 									<input class="form-input" type="text" disabled placeholder="0">
 								</div>
-								<div class="flex-1 max-w-[328px] w-full">
+								<div class="flex-1 sm:min-w-[328px] sm:max-w-fit max-w-[205px] 1440:w-full">
 									<div class="flex items-center my-[10px] gap-[6px]">
 										<p class="form-info">Хранение 1 ед. в день, ₽</p>
 										<div class="relative cursor-pointer group">
 											<div class="relative cursor-pointer group">
 												<img src="images/icons/question.svg" alt="">
 												<div
-													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+													class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 													<div class="relative py-[5px] px-[14px]">
 														<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45">
 														</div>
@@ -596,7 +630,7 @@
 												</div>
 											</div>
 											<div
-												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 												<div class="relative py-[5px] px-[14px]">
 													<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 													<p class="text-sm leading-[20px] text-white">
@@ -608,21 +642,21 @@
 									</div>
 									<input class="form-input" type="text" disabled placeholder="0">
 								</div>
-								<div class="flex-1 max-w-[102px]">
+								<div class="flex-1 1440:max-w-[102px] sm:max-w-fit max-w-[102px] 1440:min-w-[auto] min-w-[102px]">
 									<div class="flex my-[10px] gap-[6px] items-center">
 										<p class="form-info">В рублях</p>
 									</div>
 									<div class="flex gap-4">
-										<input class="form-input max-w-[102px]" type="text" disabled placeholder="0">
+										<input class="form-input min-w-[102px]" type="text" disabled placeholder="0">
 									</div>
 								</div>
-								<div class="flex-1 max-w-[176px]">
+								<div class="flex-1 1440:max-w-[176px] max-w-[auto] 1440:min-w-[auto] min-w-[176px]">
 									<div class="flex gap-[6px] items-center my-[10px]">
 										<p class="form-info">Выкуп, %</p>
 										<div class="relative cursor-pointer group">
 											<img src="images/icons/question.svg" alt="">
 											<div
-												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 												<div class="relative py-[5px] px-[14px]">
 													<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 													<p class="text-sm leading-[20px] text-white">
@@ -642,7 +676,7 @@
 										<div class="relative cursor-pointer group">
 											<img src="images/icons/question.svg" alt="">
 											<div
-												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 												<div class="relative py-[5px] px-[14px]">
 													<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 													<p class="text-sm leading-[20px] text-white">
@@ -659,14 +693,15 @@
 							</div>
 
 							<h6 class="form-title mt-8">Ваш товар</h6>
-							<div class="flex justify-between gap-4">
-								<div class="flex-1 max-w-[328px]">
+							<div
+								class="flex justify-between gap-4 gap-y-[6px] flex-wrap sm:border-none sm:pb-0 pb-[23px] sm:bordder-0 border-b border-[#ddd6fe]">
+								<div class="flex-1 min-w-[328px]">
 									<div class="flex my-[10px] gap-[6px] items-center">
 										<p class="form-info">Налоговый режим</p>
 										<div class="relative cursor-pointer group">
 											<img src="images/icons/question.svg" alt="">
 											<div
-												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 												<div class="relative py-[5px] px-[14px]">
 													<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 													<p class="text-sm leading-[20px] text-white">
@@ -704,14 +739,17 @@
 											</div>
 										</div>
 									</div>
+									<p class="warning-text hidden text-red text-sm leading-[22px] mt-1">
+										Обязательное поле
+									</p>
 								</div>
-								<div class="flex-1 max-w-[210px]">
+								<div class="flex-1 1440:max-w-[210px] max-w-[auto] 1440:min-w-[auto] min-w-[210px]">
 									<div class="flex my-[10px] gap-[6px] items-center">
 										<p class="form-info">Налоговая ставка, %</p>
 										<div class="relative cursor-pointer group">
 											<img src="images/icons/question.svg" alt="">
 											<div
-												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 												<div class="relative py-[5px] px-[14px]">
 													<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 													<p class="text-sm leading-[20px] text-white">
@@ -723,7 +761,7 @@
 									</div>
 									<input class="form-input" type="text">
 								</div>
-								<div class="flex-1 max-w-[102px]">
+								<div class="flex-1 1440:max-w-[102px] max-w-[auto] 1440:min-w-[auto] min-w-[102px]">
 									<div class="flex my-[10px]">
 										<p class="form-info">В рублях</p>
 									</div>
@@ -735,7 +773,7 @@
 										<div class="relative cursor-pointer group">
 											<img src="images/icons/question.svg" alt="">
 											<div
-												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+												class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 												<div class="relative py-[5px] px-[14px]">
 													<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 													<p class="text-sm leading-[20px] text-white">
@@ -749,7 +787,7 @@
 								</div>
 							</div>
 							<div class="form-accordion overflow-hidden">
-								<button class="open-box flex items-center gap-[7px] mt-8">
+								<button class="open-box flex items-center gap-[7px] sm:mt-8 mt-6">
 									<h6 class="form-title">Ваш товар</h6>
 									<svg class="rotate-180 duration-300 transition-all" width="14" height="8" viewBox="0 0 14 8"
 										fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -764,14 +802,14 @@
 										в
 										товар.
 									</p>
-									<div class="flex gap-4 items-end">
+									<div class="flex gap-4 items-end flex-wrap">
 										<div class="max-w-[328px] w-full">
-											<div class="flex my-[10px] gap-[6px] items-center">
+											<div class="flex sm:my-[10px] mb-[10px] mt-[0] gap-[6px] items-center">
 												<p class="form-info">Мои вложения, ₽</p>
 												<div class="relative cursor-pointer group">
 													<img src="images/icons/question.svg" alt="">
 													<div
-														class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+														class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 														<div class="relative py-[5px] px-[14px]">
 															<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45">
 															</div>
@@ -785,13 +823,13 @@
 											<input class="form-input " type="text" placeholder="Введите сумму инвестиции">
 										</div>
 										<div
-											class="flex-1 flex flex-col justify-end border border-[#DFE4EA] rounded-md py-[14px] pl-4 pr-[11px]">
+											class="flex-1 flex flex-col justify-end border border-[#DFE4EA] rounded-md py-[14px] pl-4 pr-[11px] sm:w-auto w-full">
 											<div class="flex mb-1 gap-[6px]">
 												<p class="form-info">Кол-во товара</p>
 												<div class="relative cursor-pointer group">
 													<img src="images/icons/question.svg" alt="">
 													<div
-														class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+														class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 														<div class="relative py-[5px] px-[14px]">
 															<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45">
 															</div>
@@ -802,16 +840,16 @@
 													</div>
 												</div>
 											</div>
-											<h5 class="font-medium text-base leading-4 text-dark-3">0 шт.</h5>
+											<h5 class="font-medium sm:text-base sm:leading-4 leading-[22px] text-dark-3 text-sm">0 шт.</h5>
 										</div>
 										<div
-											class="flex-1 flex flex-col justify-end border border-[#DFE4EA] rounded-md py-[14px] pl-4 pr-[11px]">
+											class="flex-1 flex flex-col justify-end border border-[#DFE4EA] rounded-md py-[14px] pl-4 pr-[11px] sm:w-auto w-full">
 											<div class="flex mb-1 gap-[6px]">
 												<p class="form-info">Выручка</p>
 												<div class="relative cursor-pointer group">
 													<img src="images/icons/question.svg" alt="">
 													<div
-														class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+														class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 														<div class="relative py-[5px] px-[14px]">
 															<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45">
 															</div>
@@ -822,7 +860,7 @@
 													</div>
 												</div>
 											</div>
-											<h5 class="font-medium text-base leading-4 text-dark-3">0 ₽</h5>
+											<h5 class="font-medium sm:text-base sm:leading-4 leading-[22px] text-dark-3 text-sm">0 ₽</h5>
 										</div>
 										<div
 											class="flex-1 flex flex-col justify-end border border-[#DFE4EA] rounded-md py-[14px] pl-[13px] pr-[11px]">
@@ -831,7 +869,7 @@
 												<div class="relative cursor-pointer group">
 													<img src="images/icons/question.svg" alt="">
 													<div
-														class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+														class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 														<div class="relative py-[5px] px-[14px]">
 															<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45">
 															</div>
@@ -842,7 +880,7 @@
 													</div>
 												</div>
 											</div>
-											<h5 class="font-medium text-base leading-4 text-dark-3">0 ₽</h5>
+											<h5 class="font-medium sm:text-base sm:leading-4 leading-[22px] text-dark-3 text-sm">0 ₽</h5>
 										</div>
 										<div
 											class="flex-1 flex flex-col justify-end border border-[#DFE4EA] rounded-md py-[14px] pl-4 pr-[11px]">
@@ -851,7 +889,7 @@
 												<div class="relative cursor-pointer group">
 													<img src="images/icons/question.svg" alt="">
 													<div
-														class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+														class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 														<div class="relative py-[5px] px-[14px]">
 															<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45">
 															</div>
@@ -862,7 +900,7 @@
 													</div>
 												</div>
 											</div>
-											<h5 class="font-medium text-base leading-4 text-dark-3">0 шт.</h5>
+											<h5 class="font-medium sm:text-base sm:leading-4 leading-[22px] text-dark-3 text-sm">0 шт.</h5>
 										</div>
 									</div>
 								</div>
@@ -876,15 +914,15 @@
 				<div class="container">
 					<div class="border-2 border-[#C4B5FD] bg-white p-8 rounded-[20px]">
 						<h6 class="text-dark-3 leading-4 text-base font-medium">Итоговые значения за 1 ед.</h6>
-						<div class="flex items-center gap-0 mt-4">
+						<div class="kurs-boxes gap-y-4 items-center gap-0 mt-4 flex-wrap">
 							<div class="border-r-[#DDD6FE] border-r pr-8">
 								<h6 class="text-dark-3 leading-4 text-2xl mb-[10px] font-medium">0 ₽</h6>
 								<div class="flex items-center gap-[6px]">
-									<p class="leading-[22px] text-primary text-sm">Инвестиции</p>
+									<p class="leading-[22px] text-primary text-sm whitespace-nowrap">Инвестиции</p>
 									<div class="relative cursor-pointer group">
 										<img src="images/icons/question.svg" alt="">
 										<div
-											class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+											class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 											<div class="relative py-[5px] px-[14px]">
 												<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 												<p class="text-sm leading-[20px] text-white">
@@ -898,11 +936,11 @@
 							<div class="border-r-[#DDD6FE] border-r px-8">
 								<h6 class="text-dark-3 leading-4 text-2xl mb-[10px] font-medium">0 ₽</h6>
 								<div class="flex items-center gap-[6px]">
-									<p class="leading-[22px] text-primary text-sm">Доходность</p>
+									<p class="leading-[22px] text-primary text-sm whitespace-nowrap">Доходность</p>
 									<div class="relative cursor-pointer group">
 										<img src="images/icons/question.svg" alt="">
 										<div
-											class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+											class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 											<div class="relative py-[5px] px-[14px]">
 												<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 												<p class="text-sm leading-[20px] text-white">
@@ -916,11 +954,11 @@
 							<div class="border-r-[#DDD6FE] border-r px-8">
 								<h6 class="text-dark-3 leading-4 text-2xl mb-[10px] font-medium">0 ₽</h6>
 								<div class="flex items-center gap-[6px]">
-									<p class="leading-[22px] text-primary text-sm">Маржинальность</p>
+									<p class="leading-[22px] text-primary text-sm whitespace-nowrap">Маржинальность</p>
 									<div class="relative cursor-pointer group">
 										<img src="images/icons/question.svg" alt="">
 										<div
-											class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+											class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 											<div class="relative py-[5px] px-[14px]">
 												<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 												<p class="text-sm leading-[20px] text-white">
@@ -934,11 +972,11 @@
 							<div class="border-r-[#DDD6FE] border-r px-8">
 								<h6 class="text-dark-3 leading-4 text-2xl mb-[10px] font-medium">0 ₽</h6>
 								<div class="flex items-center gap-[6px]">
-									<p class="leading-[22px] text-primary text-sm">Маржинальная прибыль</p>
+									<p class="leading-[22px] text-primary text-sm whitespace-nowrap">Маржинальная прибыль</p>
 									<div class="relative cursor-pointer group">
 										<img src="images/icons/question.svg" alt="">
 										<div
-											class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+											class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 											<div class="relative py-[5px] px-[14px]">
 												<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 												<p class="text-sm leading-[20px] text-white">
@@ -952,11 +990,11 @@
 							<div class="border-r-[#DDD6FE] border-r px-8">
 								<h6 class="text-dark-3 leading-4 text-2xl mb-[10px] font-medium">0 ₽</h6>
 								<div class="flex items-center gap-[6px]">
-									<p class="leading-[22px] text-primary text-sm">Минимальная цена</p>
+									<p class="leading-[22px] text-primary text-sm whitespace-nowrap">Минимальная цена</p>
 									<div class="relative cursor-pointer group">
 										<img src="images/icons/question.svg" alt="">
 										<div
-											class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+											class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 											<div class="relative py-[5px] px-[14px]">
 												<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 												<p class="text-sm leading-[20px] text-white">
@@ -970,11 +1008,11 @@
 							<div class="px-8">
 								<h6 class="text-dark-3 leading-4 text-2xl mb-[10px] font-medium">0 ₽</h6>
 								<div class="flex items-center gap-[6px]">
-									<p class="leading-[22px] text-primary text-sm">Максимальная скидка</p>
+									<p class="leading-[22px] text-primary text-sm whitespace-nowrap">Максимальная скидка</p>
 									<div class="relative cursor-pointer group">
 										<img src="images/icons/question.svg" alt="">
 										<div
-											class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px]">
+											class="absolute hidden group-hover:block top-full mt-[11px] cursor-auto left-1/2 -translate-x-1/2 bg-dark-3 z-50 rounded-[5px] w-[330px] tooltip-box">
 											<div class="relative py-[5px] px-[14px]">
 												<div class="absolute top-[-5px] left-1/2 -translate-x-1/2 w-3 h-3 bg-dark-3 rotate-45"></div>
 												<p class="text-sm leading-[20px] text-white">
@@ -990,24 +1028,27 @@
 				</div>
 			</section>
 
-			<section class="mt-[62px]">
+			<section class="sm:mt-[62px] mt-8">
 				<div class="container">
-					<div class="text-center mb-12">
+					<div class="text-center mb-12 md:block hidden">
 						<h4 class="font-bold text-[30px] leading-[38px]">Как работать с калькулятором UNIT-экономики</h4>
 						<p class="max-w-[45%] mx-auto leading-26 text-lg text-[#6B7280] mt-4">С калькулятором вы уже на стадии
 							закупки выстроите точную
 							стратегию будущих продаж вашего магазина.</p>
 					</div>
 
-					<div class="flex items-start justify-between gap-8">
-						<div class="flex-1 pl-8">
-							<h6 class="leading-[30px] text-2xl text-dark-3 font-semibold">Инструкция по использованию</h6>
+					<div class="flex items-start flex-box justify-between gap-8">
+						<div class="w-1/2 pl-8">
+							<h6 class="sm:leading-[30px] leading-[22px] sm:text-2xl text-sm text-dark-3 font-semibold">Инструкция по
+								использованию</h6>
 							<div class="space-y-4 mt-4">
 								<div class="flex items-center gap-[10px]">
 									<div
 										class="flex items-center justify-center flex-col min-w-8 h-8 bg-purple rounded-full text-base leading-6 text-white">
 										1</div>
-									<p class="leading-26 text-lg text-dark-3">Выберите необходимую категорию, впишите себестоимость,
+									<p class="sm:leading-26 sm:text-lg text-sm leading-[22px] text-dark-3">Выберите необходимую категорию,
+										впишите
+										себестоимость,
 										количество и желаемую цену на
 										выходе.</p>
 								</div>
@@ -1016,7 +1057,10 @@
 									<div
 										class="flex items-center justify-center flex-col min-w-8 h-8 bg-purple rounded-full text-base leading-6 text-white">
 										2</div>
-									<p class="leading-26 text-lg text-dark-3">Укажите тип хранения товаров: FBO, FBS или DBS. Это поможет
+									<p class="sm:leading-26 sm:text-lg text-sm leading-[22px] text-dark-3">Укажите тип хранения товаров:
+										FBO, FBS
+										или DBS. Это
+										поможет
 										рассчитать цены доставки и хранения на Wildberries.</p>
 								</div>
 
@@ -1024,7 +1068,10 @@
 									<div
 										class="flex items-center justify-center flex-col min-w-8 h-8 bg-purple rounded-full text-base leading-6 text-white">
 										3</div>
-									<p class="leading-26 text-lg text-dark-3">Важными параметрами также являются габариты (от этого часто
+									<p class="sm:leading-26 sm:text-lg text-sm leading-[22px] text-dark-3">Важными параметрами также
+										являются
+										габариты (от
+										этого часто
 										зависит % комиссии Wildberries, который учитывается) и
 										система налогообложения вашей компании.</p>
 								</div>
@@ -1032,23 +1079,26 @@
 									<div
 										class="flex items-center justify-center flex-col min-w-8 h-8 bg-purple rounded-full text-base leading-6 text-white">
 										4</div>
-									<p class="leading-26 text-lg text-dark-3">Нажав кнопку «Посчитать», вы увидите подробный список затрат
+									<p class="sm:leading-26 sm:text-lg text-sm leading-[22px] text-dark-3">Нажав кнопку «Посчитать», вы
+										увидите
+										подробный
+										список затрат
 										(включая стоимость логистики, комиссию за хранение и т.д.),
 										и конечную прибыль.</p>
 								</div>
 							</div>
 						</div>
-						<div class="flex-1">
-							<h6 class="leading-[30px] text-2xl text-dark-3 font-semibold">Инструкция по использованию</h6>
+						<div class="w-1/2 pr-8">
+							<h6 class="leading-[30px] sm:text-2xl text-xl text-dark-3 font-semibold">Инструкция по использованию</h6>
 							<div class="accordion border-b border-[#dfe4ea] py-4">
 								<div
 									class="accordion-header text-dark-3 hover:text-purple justify-between flex items-center cursor-pointer">
-									<p class="text-lg leading-26 ">Выберите необходимую категорию, впишите себестоимость?</p>
+									<p class="sm:text-lg text-sm leading-26">Выберите необходимую категорию, впишите себестоимость?</p>
 									<img class="accordion-header__icon-plus" src="images/icons/add.svg" alt="add icon">
 									<img class="accordion-header__icon-minus hidden" src="images/icons/minus.svg" alt="add icon">
 								</div>
 								<div class="accordion-content hidden mt-4">
-									<p class="text-primary text-base leading-6">
+									<p class="text-primary sm:text-base text-sm leading-6">
 										Вот вам яркий пример современных тенденций — убеждённость некоторых оппонентов требует определения и
 										уточнения
 										стандартных подходов. Равным образом, начало повседневной работы по формированию позиции.
@@ -1059,12 +1109,12 @@
 							<div class="accordion border-b border-[#dfe4ea] py-4">
 								<div
 									class="accordion-header text-dark-3 hover:text-purple justify-between flex items-center cursor-pointer">
-									<p class="text-lg leading-26 ">Выберите необходимую категорию, впишите себестоимость?</p>
+									<p class="sm:text-lg text-sm leading-26">Выберите необходимую категорию, впишите себестоимость?</p>
 									<img class="accordion-header__icon-plus" src="images/icons/add.svg" alt="add icon">
 									<img class="accordion-header__icon-minus hidden" src="images/icons/minus.svg" alt="add icon">
 								</div>
 								<div class="accordion-content hidden mt-4">
-									<p class="text-primary text-base leading-6">
+									<p class="text-primary sm:text-base text-sm leading-6">
 										Вот вам яркий пример современных тенденций — убеждённость некоторых оппонентов требует определения и
 										уточнения
 										стандартных подходов. Равным образом, начало повседневной работы по формированию позиции.
@@ -1075,12 +1125,12 @@
 							<div class="accordion border-b border-[#dfe4ea] py-4">
 								<div
 									class="accordion-header text-dark-3 hover:text-purple justify-between flex items-center cursor-pointer">
-									<p class="text-lg leading-26 ">Выберите необходимую категорию, впишите себестоимость?</p>
+									<p class="sm:text-lg text-sm leading-26">Выберите необходимую категорию, впишите себестоимость?</p>
 									<img class="accordion-header__icon-plus" src="images/icons/add.svg" alt="add icon">
 									<img class="accordion-header__icon-minus hidden" src="images/icons/minus.svg" alt="add icon">
 								</div>
 								<div class="accordion-content hidden mt-4">
-									<p class="text-primary text-base leading-6">
+									<p class="text-primary sm:text-base text-sm leading-6">
 										Вот вам яркий пример современных тенденций — убеждённость некоторых оппонентов требует определения и
 										уточнения
 										стандартных подходов. Равным образом, начало повседневной работы по формированию позиции.
@@ -1090,12 +1140,12 @@
 							<div class="accordion border-b border-[#dfe4ea] py-4">
 								<div
 									class="accordion-header text-dark-3 hover:text-purple justify-between flex items-center cursor-pointer">
-									<p class="text-lg leading-26 ">Выберите необходимую категорию, впишите себестоимость?</p>
+									<p class="sm:text-lg text-sm leading-26">Выберите необходимую категорию, впишите себестоимость?</p>
 									<img class="accordion-header__icon-plus" src="images/icons/add.svg" alt="add icon">
 									<img class="accordion-header__icon-minus hidden" src="images/icons/minus.svg" alt="add icon">
 								</div>
 								<div class="accordion-content hidden mt-4">
-									<p class="text-primary text-base leading-6">
+									<p class="text-primary sm:text-base text-sm leading-6">
 										Вот вам яркий пример современных тенденций — убеждённость некоторых оппонентов требует определения и
 										уточнения
 										стандартных подходов. Равным образом, начало повседневной работы по формированию позиции.
@@ -1105,12 +1155,12 @@
 							<div class="accordion border-b border-[#dfe4ea] py-4">
 								<div
 									class="accordion-header text-dark-3 hover:text-purple justify-between flex items-center cursor-pointer">
-									<p class="text-lg leading-26 ">Выберите необходимую категорию, впишите себестоимость?</p>
+									<p class="sm:text-lg text-sm leading-26">Выберите необходимую категорию, впишите себестоимость?</p>
 									<img class="accordion-header__icon-plus" src="images/icons/add.svg" alt="add icon">
 									<img class="accordion-header__icon-minus hidden" src="images/icons/minus.svg" alt="add icon">
 								</div>
 								<div class="accordion-content hidden mt-4">
-									<p class="text-primary text-base leading-6">
+									<p class="text-primary sm:text-base text-sm leading-6">
 										Вот вам яркий пример современных тенденций — убеждённость некоторых оппонентов требует определения и
 										уточнения
 										стандартных подходов. Равным образом, начало повседневной работы по формированию позиции.
@@ -1120,26 +1170,29 @@
 						</div>
 					</div>
 
-					<div class="flex justify-between gap-[64px] mt-[62px]">
-						<div class="flex-1">
-							<div class="bg-chat-bg bg-no-repeat bg-contain bg-right bg-white p-6 rounded-[20px]">
-								<div class="py-[13px] px-3 rounded-xl bg-dark-3 mb-4 w-fit">
+					<div class="flex 992:flex-nowrap flex-wrap justify-between gap-[64px] sm:mt-[62px] mt-8">
+						<div class="992:w-1/2 w-full">
+							<div
+								class="sm:bg-chat-bg bg-no-repeat bg-contain bg-right bg-white p-6 rounded-[20px] sm:text-left text-center">
+								<div class="py-[13px] px-3 rounded-xl bg-dark-3 mb-4 w-fit sm:mx-0 mx-auto">
 									<img src="images/icons/users-group.svg" alt="users-group" width="26" height="23">
 								</div>
-								<h5 class="text-dark-3 leading-[30px] text-2xl">Чат поставщиков</h5>
-								<p class="leading-6 text-dark-3 my-4">
+								<h5 class="text-dark-3 sm:leading-[30px] font-bold sm:text-2xl text-lg leading-26">Чат поставщиков</h5>
+								<p class="sm:leading-6 text-dark-3 my-4 sm:text-base text-sm leading-[22px]">
 									Делимся опытом и помогаем <br>
 									продавать на маркетплейсах
 								</p>
-								<a class="btn inline-block" href="#!">Вступить в сообщество</a>
+								<a class="btn inline-block sm:w-fit w-full" href="#!">Вступить в сообщество</a>
 							</div>
-							<p class="text-[#6B7280] mt-4 leading-[22px] text-sm text-right">Чат поддержки поставщиков маркетплейсов
+							<p class="text-[#6B7280] mt-4 sm:leading-[22px] sm:text-sm text-xs leading-5 sm:text-right text-center">
+								Чат
+								поддержки поставщиков маркетплейсов
 								Wildberries и Ozon.
 								Консультативная помощь от реальных
 								продавцов на ведущих
 								торговых площадках 🧑‍💼</p>
 						</div>
-						<div class="flex-1">
+						<div class="992:w-1/2 w-full">
 							<div class="flex items-center gap-[15px]">
 								<img src="images/foto.png" alt="foto" width="80" height="80">
 								<div>
@@ -1150,7 +1203,8 @@
 									</p>
 								</div>
 							</div>
-							<div class="border-2 mt-4 border-purple rounded-[20px] p-6 flex justify-between gap-4 items-center">
+							<div
+								class="border-2 mt-4 border-purple 992:flex-nowrap flex-wrap rounded-[20px] p-6 flex justify-between gap-4 items-center">
 								<div>
 									<p class="text-purple leading-6 text-base max-w-[405px]">
 										Если вы заметили неполадки или у вас есть
@@ -1169,26 +1223,32 @@
 		</main>
 
 		<!-- footer -->
-		<footer class="mt-[440px] relative">
+		<footer class="md:mt-[64px] mt-8 relative bg-white">
 			<div class="container">
-				<div class="flex justify-between items-center py-8">
-					<a href="#!">
+				<div class="flex justify-between items-center py-8 gap-y-4 flex-wrap">
+					<a class="md:mx-0 mx-auto" href="#!">
 						<img src="images/icons/footer-logo.svg" alt="footer-logo">
 					</a>
-					<p class="text-[#6B7280] leading-6 max-w-[453px] text-right">Калькулятор UNIT-экономики цены, доставки и
+					<p
+						class="text-[#6B7280] md:mx-0 mx-auto 480:text-base text-xs leading-6 max-w-[453px] md:text-right text-center">
+						Калькулятор
+						UNIT-экономики цены,
+						доставки и
 						хранения
 						на Wildberries для FBO и FBS актуальный на 2024 год.</p>
 				</div>
 			</div>
 
-			<div class="pt-[121px] pb-[100px] footer-bottom overflow-hidden relative">
-				<div class="container flex items-start gap-[122px] justify-between">
-					<div class="max-w-[270px]">
+			<div class="md:pt-[121px] md:pb-[100px] py-4 footer-bottom overflow-hidden relative">
+				<div
+					class="container flex items-start 992:gap-[122px] sm:gap-8 gap-[10px] 480:flex-row flex-col justify-between flex-wrap">
+					<div class="md:max-w-[270px] 480:pb-0 pb-4">
 						<a href="#!">
 							<img src="images/icons/footer-logo.svg" alt="footer-logo">
 						</a>
 
-						<p class="leading-6 text-[#637381] py-8">
+						<p
+							class="480:leading-6 text-[#637381] md:py-8 py-4 480:text-base text-xs 480:max-w-fit max-w-[270px] leading-[20px]">
 							Калькулятор UNIT-экономики цены, доставки и хранения на Wildberries для FBO и FBS актуальный на 2024 год.
 						</p>
 						<a class="flex items-center gap-3 text-[#212B36] leading-6 font-medium text-sm" href="#!">
@@ -1197,8 +1257,8 @@
 						</a>
 					</div>
 
-					<div>
-						<h5 class="text-[#212B36] text-lg leading-26 font-semibold mb-8">Resources</h5>
+					<div class="480:border-none border-b pb-4 480:w-fit w-full border-[#ddd7fe]">
+						<h5 class="text-[#212B36] text-lg leading-26 font-semibold md:mb-8 mb-3">Resources</h5>
 						<ul>
 							<li>
 								<a class="text-base inline-block mb-3 leading-6 text-[#8646F4]" href="#!">Saas Development</a>
@@ -1215,8 +1275,8 @@
 						</ul>
 					</div>
 
-					<div>
-						<h5 class="text-[#212B36] text-lg leading-26 font-semibold mb-8">Resources</h5>
+					<div class="480:border-none border-b pb-4 480:w-fit w-full border-[#ddd7fe]">
+						<h5 class="text-[#212B36] text-lg leading-26 font-semibold md:mb-8 mb-3">Resources</h5>
 						<ul>
 							<li>
 								<a class="text-base inline-block mb-3 leading-6 text-[#8646F4]" href="#!">Saas Development</a>
@@ -1233,8 +1293,8 @@
 						</ul>
 					</div>
 
-					<div>
-						<h5 class="text-[#212B36] text-lg leading-26 font-semibold mb-8">Resources</h5>
+					<div class="pb-4">
+						<h5 class="text-[#212B36] text-lg leading-26 font-semibold md:mb-8 mb-3">Resources</h5>
 						<ul>
 							<li>
 								<a class="text-base inline-block mb-3 leading-6 text-[#8646F4]" href="#!">Saas Development</a>
@@ -1251,9 +1311,9 @@
 						</ul>
 					</div>
 
-					<div>
-						<h5 class="text-[#212B36] text-lg leading-26 font-semibold mb-8">Resources</h5>
-						<div class="my-8 flex gap-[15px]">
+					<div class="pb-4 480:w-fit w-full">
+						<h5 class="text-[#212B36] text-lg leading-26 font-semibold md:mb-8 mb-3">Follow Us On</h5>
+						<div class="md:my-8 my-4 flex gap-[15px]">
 							<a href="#!"
 								class="soccial-media duration-300 hover:bg-purple hover:border-transparent w-8 h-8 flex items-center justify-center rounded-full border border-[#E5E5E5]">
 								<svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">

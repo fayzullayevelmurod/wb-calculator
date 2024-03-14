@@ -28,6 +28,11 @@ module.exports = {
 			},
 			lineHeight: {
 				"26": "26px"
+			},
+			"screens": {
+				"992": "992px",
+				"1440": "1440px",
+				"480": "480px"
 			}
 		},
 	},

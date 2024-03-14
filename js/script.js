@@ -1,18 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
+	// responsive menu
+	const menuBtn = document.querySelector('.menu-btn');
+	const nav = document.querySelector("header .nav");
+	menuBtn.addEventListener('click', () => {
+		nav.classList.toggle('active');
+		menuBtn.classList.toggle('active');
+	})
+
+	nav.addEventListener('click', (e) => {
+		if (e.target && e.target.classList.contains('nav')) {
+			nav.classList.remove('active');
+			menuBtn.classList.remove('active');
+		}
+	})
+
+
+	const warningText = document.querySelector('.warning-text');
+
 	function show(value, textBox, optionContainer) {
 		textBox.value = value;
 		optionContainer.classList.add('hidden');
 	}
 
-	const sellectDropdown = document.querySelector('.sellect-dropdown');
 	function initializeDropdown(dropdown) {
 		const textBox = dropdown.querySelector('.textBox');
 		const options = dropdown.querySelector('.option');
 		const optionItems = options.querySelectorAll('.option-item');
+
 		optionItems.forEach((item) => {
 			item.addEventListener('click', function () {
 				show(item.textContent.trim(), textBox, options);
-				this.parentNode.parentNode.parentNode.classList.remove('active')
+				this.parentNode.parentNode.parentNode.classList.remove('active');
 			});
 		});
 
@@ -21,10 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			this.parentNode.classList.add('active');
 		});
 
-		// Close the dropdown when clicking outside
 		document.addEventListener('click', function (e) {
 			if (!options.contains(e.target) && e.target !== textBox) {
 				options.classList.add('hidden');
+				// warningText.classList.remove('hidden');
 			}
 		});
 	}
@@ -48,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		const accordionHeaderIconPlus = el.querySelector('.accordion-header__icon-plus');
 		const accordionHeaderIconMinus = el.querySelector('.accordion-header__icon-minus');
 		const accordionContent = el.querySelector('.accordion-content');
-		console.log(accordionHeader);
 		accordionHeader.addEventListener('click', () => {
 			accordionHeaderIconPlus.classList.toggle('hidden');
 			accordionHeaderIconMinus.classList.toggle('hidden');
@@ -56,4 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	})
 
+	const copyText = document.querySelector('.copy-btn span');
+	const copyBtn = document.querySelector('.copy-btn');
+
+	copyBtn.addEventListener('click', () => {
+		if (copyText.textContent === 'Поделиться калькулятором') {
+			copyText.textContent = 'Ссылка скопирована';
+			copyText.parentNode.classList.add('active')
+		}
+	})
 })
