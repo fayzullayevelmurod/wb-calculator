@@ -63,6 +63,10 @@ body {
 	@apply border-[#DFE4EA] rounded-md px-[20px] py-[11px] outline-none border w-full text-dark placeholder:text-[#9CA3AF];
 }
 
+.form-input:disabled {
+	@apply bg-gray-2
+}
+
 .select-input {
 	@apply absolute bg-[#fff] border border-[#DFE4EA] text-base rounded-md placeholder:font-normal placeholder:leading-6 top-0 left-0 w-full h-full cursor-pointer px-[20px] py-[11px] placeholder:text-primary outline-none text-dark
 }

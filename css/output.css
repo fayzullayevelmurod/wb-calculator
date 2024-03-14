@@ -620,6 +620,10 @@ video {
   margin-bottom: 2rem;
 }
 
+.mb-\[10px\] {
+  margin-bottom: 10px;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -648,6 +652,10 @@ video {
   margin-top: 400px;
 }
 
+.mt-\[6px\] {
+  margin-top: 6px;
+}
+
 .flex {
   display: flex;
 }
@@ -664,6 +672,22 @@ video {
   width: 100%;
 }
 
+.max-w-\[102px\] {
+  max-width: 102px;
+}
+
+.max-w-\[134px\] {
+  max-width: 134px;
+}
+
+.max-w-\[210px\] {
+  max-width: 210px;
+}
+
+.max-w-\[328px\] {
+  max-width: 328px;
+}
+
 .max-w-\[666px\] {
   max-width: 666px;
 }
@@ -674,6 +698,18 @@ video {
 
 .max-w-\[80\%\] {
   max-width: 80%;
+}
+
+.max-w-\[\] {
+  max-width: ;
+}
+
+.max-w-\[10px\] {
+  max-width: 10px;
+}
+
+.max-w-\[176px\] {
+  max-width: 176px;
 }
 
 .flex-1 {
@@ -718,6 +754,10 @@ video {
 
 .gap-\[6px\] {
   gap: 6px;
+}
+
+.gap-\[\] {
+  gap: ;
 }
 
 .overflow-hidden {
@@ -1137,6 +1177,11 @@ body {
 .form-input::placeholder {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.form-input:disabled {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .select-input {
