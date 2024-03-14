@@ -135,7 +135,7 @@
 			<!-- form section -->
 			<section class="mt-[30px]">
 				<div class="container">
-					<div class="p-8 rounded-[20px]">
+					<div class="bg-white p-8 rounded-[20px]">
 						<div class="flex justify-between items-center">
 							<h5 class="text-dark text-lg leading-26 font-medium">Калькулятор расчета юнит экономики Вайлдберриз
 							</h5>
@@ -186,6 +186,94 @@
 								</button>
 							</div>
 						</div>
+						<div class="mt-4">
+							<h6 class="form-title">Ваш товар</h6>
+							<div class="flex justify-between gap-4">
+								<div class="flex-1">
+									<div class="flex my-[10px]">
+										<p class="form-info">Предмет</p>
+										<img class="form-star" src="images/icons/form-star.svg" alt="form-star" width="">
+										<img src="images/icons/question.svg" alt="">
+									</div>
+									<div class="sellect-dropdown relative xsm:w-[220px] w-full">
+										<input class="select-input textBox" type="text" placeholder="Выберите из списка" readonly="">
+										<div
+											class="option border border-gray-2 absolute top-full mt-[10px] z-[60] w-full bg-[#fff] rounded-md pl-3 pr-2 py-[10px] overflow-hidden hidden">
+											<div class="option-scroll overflow-y-auto h-[153px] pr-2">
+												<div
+													class="option-item py-[7px] text-base leading-6 text-dark font-normal px-2 cursor-pointer hover:bg-purple-light rounded-md">
+													3D-очки
+												</div>
+												<div
+													class="option-item py-[7px] text-base leading-6 text-dark font-normal px-2 cursor-pointer hover:bg-purple-light rounded-md">
+													3D-очки
+												</div>
+												<div
+													class="option-item py-[7px] text-base leading-6 text-dark font-normal px-2 cursor-pointer hover:bg-purple-light rounded-md">
+													3D-очки
+												</div>
+												<div
+													class="option-item py-[7px] text-base leading-6 text-dark font-normal px-2 cursor-pointer hover:bg-purple-light rounded-md">
+													3D-очки
+												</div>
+												<div
+													class="option-item py-[7px] text-base leading-6 text-dark font-normal px-2 cursor-pointer hover:bg-purple-light rounded-md">
+													3D-очки
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="flex-1">
+									<div class="flex my-[10px]">
+										<p class="form-info">Цена на WB, ₽</p>
+										<img class="form-star" src="images/icons/form-star.svg" alt="form-star" width="">
+									</div>
+									<input class="form-input" type="text">
+								</div>
+								<div class="flex-1">
+									<div class="flex my-[10px]">
+										<p class="form-info">Цена на WB, ₽</p>
+										<img class="form-star" src="images/icons/form-star.svg" alt="form-star" width="">
+									</div>
+									<input class="form-input" type="text">
+								</div>
+							</div>
+							<div class="flex gap-[6px] mt-8">
+								<h6 class="form-title">Фулфилмент</h6>
+								<img src="images/icons/question.svg" alt="">
+							</div>
+							<div class="flex justify-between gap-4">
+								<div class="flex-1">
+									<div class="flex my-[10px] gap-[6px]">
+										<p class="form-info">Логистика от произ., ₽</p>
+										<img src="images/icons/question.svg" alt="question icon">
+									</div>
+									<input class="form-input" type="text">
+								</div>
+								<div class="flex-1">
+									<div class="flex my-[10px] gap-[6px]">
+										<p class="form-info">Упаковка, ₽</p>
+										<img src="images/icons/question.svg" alt="question icon">
+									</div>
+									<input class="form-input" type="text" placeholder="Стоимость упаковки за 1 ед.">
+								</div>
+								<div class="flex-1">
+									<div class="flex my-[10px] gap-[6px]">
+										<p class="form-info">Логистика от произ., ₽</p>
+										<img src="images/icons/question.svg" alt="question icon">
+									</div>
+									<input class="form-input" type="text">
+								</div>
+								<div class="flex-1">
+									<div class="flex my-[10px] gap-[6px]">
+										<p class="form-info">Упаковка, ₽</p>
+										<img src="images/icons/question.svg" alt="question icon">
+									</div>
+									<input class="form-input" type="text" placeholder="Стоимость упаковки за 1 ед.">
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -193,12 +281,14 @@
 		</main>
 
 		<!-- footer -->
-		<footer>
+		<footer class="mt-[400px]">
 
 		</footer>
 
 	</div>
 
+	<!-- js -->
+	<script src="js/script.js"></script>
 </body>
 
 </html>

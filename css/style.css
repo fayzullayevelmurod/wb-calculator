@@ -38,6 +38,67 @@ body {
 .download-btn:hover svg path {
 	@apply stroke-white;
 }
+
 .download-btn:focus svg path {
 	@apply stroke-white;
+}
+
+.form-title {
+	@apply font-medium text-base leading-6 text-[#374151];
+}
+
+.form-info {
+	@apply font-normal text-base leading-6 text-primary
+}
+
+.form-star {
+	@apply ml-[2px] mx-[6px] block mb-2;
+}
+
+.sellect-dropdown {
+	@apply rounded-md py-[11px] px-[20px] outline-none leading-6 text-primary text-base
+}
+
+.form-input {
+	@apply border-[#DFE4EA] rounded-md px-[20px] py-[11px] outline-none border w-full text-dark placeholder:text-[#9CA3AF];
+}
+
+.select-input {
+	@apply absolute bg-[#fff] border border-[#DFE4EA] text-base rounded-md placeholder:font-normal placeholder:leading-6 top-0 left-0 w-full h-full cursor-pointer px-[20px] py-[11px] placeholder:text-primary outline-none text-dark
+}
+
+.option {
+	@apply left-0;
+	box-shadow: 0px 1px 3px 0px #A6AFC366;
+}
+
+.option-scroll::-webkit-scrollbar {
+	@apply bg-transparent w-[6px];
+}
+
+.option-scroll::-webkit-scrollbar-thumb {
+	@apply bg-[#DFE4EA] rounded-[10px] h-[6px];
+}
+
+/* selec */
+.sellect-dropdown {
+	@apply h-[46px];
+}
+
+.sellect-dropdown::before {
+	@apply content-[url("../images/icons/arrow-down.svg")] z-50 absolute right-[20px] top-[35%] translate-y-[-50%] w-[12px] h-[12px];
+}
+
+.catalog .sellect-dropdown::before {
+	@apply right-[15px];
+}
+
+.sellect-dropdown.active::before {
+	@apply rotate-180 top-[62%]
+}
+
+.sellect-dropdown.active input {
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-bottom: 0;
 }
