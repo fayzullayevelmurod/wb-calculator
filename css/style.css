@@ -108,3 +108,35 @@ body {
 .open-box.active svg {
 	@apply rotate-0
 }
+
+.soccial-media:hover {
+	@apply bg-purple
+}
+
+.soccial-media:hover svg path {
+	@apply fill-white
+}
+
+footer::before {
+	content: "";
+	position: absolute;
+	bottom: -20%;
+	left: -6%;
+	width: 281px;
+	height: 281px;
+	border-radius: 50%;
+	background: linear-gradient(180deg, rgba(134, 70, 244, 0.08) 0%, rgba(196, 196, 196, 0) 100%);
+	transform: rotate(157deg);
+}
+
+.footer-bottom::before {
+	content: "";
+	position: absolute;
+	top: -30%;
+	right: -6%;
+	width: 309.68px;
+	height: 309.68px;
+	border-radius: 50%;
+	background: linear-gradient(180deg, rgba(151, 71, 255, 0.08) 0%, rgba(196, 196, 196, 0) 100%);
+	transform: rotate(28.73deg);
+}
