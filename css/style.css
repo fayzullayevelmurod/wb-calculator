@@ -74,12 +74,28 @@ body {
 }
 
 .select-input {
-	@apply absolute bg-[#fff] border border-[#DFE4EA] text-base rounded-md placeholder:font-normal placeholder:leading-6 top-0 left-0 w-full h-full cursor-pointer px-[20px] py-[11px] placeholder:text-primary outline-none text-dark
+	@apply absolute bg-[#fff] border-[1.5px] border-[#DFE4EA] text-base rounded-md placeholder:font-normal placeholder:leading-6 top-0 left-0 w-full h-full cursor-pointer px-[20px] py-[11px] placeholder:text-primary outline-none text-dark
+}
+
+.select-input.error {
+	@apply border-red;
 }
 
 .option {
 	@apply left-0;
 	box-shadow: 0px 1px 3px 0px #A6AFC366;
+}
+
+.option-item {
+	@apply relative hover:bg-purple-light
+}
+
+.option-item.active .check-icon {
+	@apply block;
+}
+
+.option-item::before {
+	@apply invisible content-[url('../images/icons/check-icon.svg')] absolute top-1/2 right-[7px] z-20 -translate-y-1/2;
 }
 
 .option-scroll::-webkit-scrollbar {
@@ -106,6 +122,14 @@ body {
 .catalog .sellect-dropdown::before {
 	@apply right-[15px];
 }
+
+.sellect-dropdown .clear-icon {
+	@apply absolute z-50 top-1/2 -translate-y-1/2 right-[43px] pr-[17px] cursor-pointer border-r border-[#DFE4EA]
+}
+
+/* .sellect-dropdown::after {
+	@apply hidden content-[url("../images/icons/close-icon-two.svg")] absolute top-1/2 -translate-y-1/2 right-[43px] pr-[17px] cursor-pointer border-r border-[#DFE4EA]
+} */
 
 .sellect-dropdown.active::before {
 	@apply rotate-180 top-[62%]

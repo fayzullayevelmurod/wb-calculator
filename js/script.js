@@ -14,42 +14,115 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	})
 
+	// validate input
+	const errorBox = document.querySelectorAll('.error-box');
 
-	const warningText = document.querySelector('.warning-text');
+	errorBox.forEach(box => {
+		const validateInput = box.querySelector('.form-input');
+		const errorText = box.querySelector('.error_input');
+
+		validateInput.addEventListener('input', () => {
+			const inputValue = validateInput.value.trim();
+			if (!inputValue) {
+				errorText.classList.remove('hidden');
+			} else {
+				errorText.classList.add('hidden');
+			}
+		})
+	})
+
+
+
+	// validate select 
+	const warningText = document.querySelectorAll('.warning-text');
+	const dropdownErrors = {};
 
 	function show(value, textBox, optionContainer) {
 		textBox.value = value;
 		optionContainer.classList.add('hidden');
 	}
 
-	function initializeDropdown(dropdown) {
+	function initializeDropdown(dropdown, idx) {
 		const textBox = dropdown.querySelector('.textBox');
 		const options = dropdown.querySelector('.option');
 		const optionItems = options.querySelectorAll('.option-item');
+		const clearIcon = dropdown.querySelector(".clear-icon");
+
+		dropdownErrors[idx] = 0;
+
+		clearIcon.addEventListener('click', () => {
+			textBox.value = '';
+			clearIcon.classList.add('hidden');
+			clearIcon.classList.remove('block');
+			dropdownErrors[idx] = 0;
+			warningText[idx].classList.remove('hidden');
+			textBox.classList.add('error');
+			optionItems.forEach(el => el.classList.remove('active'))
+		})
 
 		optionItems.forEach((item) => {
+
 			item.addEventListener('click', function () {
+				optionItems.forEach(el => {
+					el.classList.remove('active');
+				})
+
 				show(item.textContent.trim(), textBox, options);
+				clearIcon.classList.add('block');
+				clearIcon.classList.remove('hidden');
+
 				this.parentNode.parentNode.parentNode.classList.remove('active');
+				item.classList.add('active');
+				warningText[idx].classList.add('hidden');
+				textBox.classList.remove('error');
 			});
 		});
 
 		textBox.addEventListener('click', function () {
 			options.classList.toggle('hidden');
 			this.parentNode.classList.add('active');
+			dropdownErrors[idx] = 1;
 		});
 
-		document.addEventListener('click', function (e) {
-			if (!options.contains(e.target) && e.target !== textBox) {
-				options.classList.add('hidden');
-				// warningText.classList.remove('hidden');
-			}
-		});
 	}
+
 
 	// Initialize each dropdown
 	const dropdowns = document.querySelectorAll('.sellect-dropdown');
 	dropdowns.forEach(initializeDropdown);
+
+	document.addEventListener('click', (event) => {
+	
+		for (const [key, value] of Object.entries(dropdownErrors)) {
+			if (value) {
+				const withinBoundaries = event.composedPath().includes(dropdowns[+key]);
+				if (withinBoundaries) {
+				} else {
+					let input = dropdowns[+key].querySelector('.textBox');
+					if (input.value === '') {
+						warningText[+key].classList.remove('hidden');
+						input.classList.add('error');
+					} else {
+						warningText[+key].classList.add('hidden');
+						input.classList.remove('error');
+					}
+					dropdownErrors[key] = 0;
+					dropdowns[+key].querySelector('.option').classList.add('hidden');
+					dropdowns[+key].classList.remove('active');
+				}
+			}
+		}
+	})
+
+
+
+
+
+
+
+
+
+
 
 	// accordion
 	const openBtn = document.querySelector('.open-box');
