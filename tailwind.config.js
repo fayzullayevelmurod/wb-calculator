@@ -14,6 +14,9 @@ module.exports = {
 				"purple": "#8646F4",
 				"dark": "#4F4F4F",
 				"dark-3": "#374151",
+				"dark-2": "#1F2A37",
+				"dark-5": "#6B7280",
+				"stroke": "#DFE4EA",
 				"secondary": "#8899A8",
 				"gray": "#F9FAFB",
 				"green": "#22AD5C",
@@ -25,6 +28,8 @@ module.exports = {
 				"primary": "#637381",
 				"gray-2": "#F3F4F6",
 				"gray-3": "#E5E7EB",
+				"blue": "#2D68F8",
+				"yellow": "#FBBF24"
 			},
 			lineHeight: {
 				"26": "26px"

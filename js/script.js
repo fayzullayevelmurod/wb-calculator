@@ -25,13 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			const inputValue = validateInput.value.trim();
 			if (!inputValue) {
 				errorText.classList.remove('hidden');
+				validateInput.classList.add('warning')
 			} else {
 				errorText.classList.add('hidden');
 			}
 		})
 	})
-
-
 
 	// validate select 
 	const warningText = document.querySelectorAll('.warning-text');
@@ -47,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const options = dropdown.querySelector('.option');
 		const optionItems = options.querySelectorAll('.option-item');
 		const clearIcon = dropdown.querySelector(".clear-icon");
+		const loaderIcon = dropdown.querySelector('.circle-icon');
 
 		dropdownErrors[idx] = 0;
 
@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 
 		optionItems.forEach((item) => {
-
 			item.addEventListener('click', function () {
 				optionItems.forEach(el => {
 					el.classList.remove('active');
@@ -79,6 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 
 		textBox.addEventListener('click', function () {
+			if (options.classList.contains('not-found')) {
+				clearIcon.classList.add('hidden');
+				loaderIcon.classList.remove('hidden');
+			}
 			options.classList.toggle('hidden');
 			this.parentNode.classList.add('active');
 			dropdownErrors[idx] = 1;
@@ -92,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	dropdowns.forEach(initializeDropdown);
 
 	document.addEventListener('click', (event) => {
-	
+
 		for (const [key, value] of Object.entries(dropdownErrors)) {
 			if (value) {
 				const withinBoundaries = event.composedPath().includes(dropdowns[+key]);
@@ -114,15 +117,29 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	})
 
+	// tabs
+	const tabItems = document.querySelectorAll('.tab-item');
+	const tabContent = document.querySelectorAll('.tab-content');
 
+	function hiddenTabContent() {
+		tabContent.forEach(content => content.classList.remove('active'));
+		tabItems.forEach(tabItem => tabItem.classList.remove('active'));
+	}
+	function showTabContent(idx = 0) {
+		tabContent[idx].classList.add('active');
+		tabItems[idx].classList.add('active');
+	}
 
+	hiddenTabContent();
+	showTabContent();
 
+	tabItems.forEach((btn, idx) => {
+		btn.addEventListener('click', () => {
+			hiddenTabContent();
+			showTabContent(idx);
+		})
 
-
-
-
-
-
+	})
 
 	// accordion
 	const openBtn = document.querySelector('.open-box');
@@ -148,11 +165,93 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const copyText = document.querySelector('.copy-btn span');
 	const copyBtn = document.querySelector('.copy-btn');
-
+	const clickIcon = document.querySelector('.click-icon')
+	const addFolder = document.querySelector('.add-folder');
 	copyBtn.addEventListener('click', () => {
-		if (copyText.textContent === 'Поделиться калькулятором') {
-			copyText.textContent = 'Ссылка скопирована';
-			copyText.parentNode.classList.add('active')
+		if (copyText.textContent === 'Сохранить данные') {
+			copyText.textContent = 'Сохранили в браузере';
+			copyText.parentNode.classList.add('active');
+			clickIcon.classList.remove('hidden');
+			addFolder.classList.add('hidden');
 		}
 	})
+
+	const reviewsCards = document.querySelectorAll('.read-more__card');
+
+	reviewsCards.forEach(reviewsCard => {
+		const readMoreBtn = reviewsCard.querySelector('.read-more__btn');
+		const customerComment = reviewsCard.querySelector('.customer-comment');
+
+		const fullText = customerComment.textContent;
+		const maxLength = 167;
+
+		if (fullText.length > maxLength) {
+			const trimmedText = fullText.slice(0, maxLength) + '...';
+			customerComment.textContent = trimmedText;
+
+			readMoreBtn.addEventListener('click', () => {
+				if (customerComment.textContent === trimmedText) {
+					customerComment.textContent = fullText;
+					readMoreBtn.textContent = 'Читать меньше';
+				} else {
+					customerComment.textContent = trimmedText;
+					readMoreBtn.textContent = 'Читать полностью ';
+				}
+			});
+		} else {
+			readMoreBtn.style.display = 'none';
+		}
+	});
+
+
+
+	try {
+		// counter
+		const counters = document.querySelectorAll('.counter');
+
+		if (counters) {
+			counters.forEach(counter => {
+				const plusCount = counter.querySelector('.plus-count');
+				const minusCount = counter.querySelector('.minus-count');
+				const count = counter.querySelectorAll('.count');
+				const countPrice = counter.querySelector('.count-price');
+
+				let countNumber = 1;
+				let currentCountPrice = 3500;
+
+				const updateCounter = () => {
+					count.forEach(item => {
+						if (countNumber <= 10) {
+							item.textContent = `${countNumber} карточка`;
+							countPrice.textContent = `${currentCountPrice}₽`;
+						}
+					});
+				};
+
+				if (plusCount) {
+					plusCount.addEventListener('click', () => {
+						if (currentCountPrice < 8000) {
+							countNumber++;
+							currentCountPrice += 500
+						};
+						updateCounter();
+					});
+				}
+
+				if (minusCount) {
+					minusCount.addEventListener('click', () => {
+						if (countNumber > 1) {
+							if (currentCountPrice >= 3500) {
+								countNumber--;
+								currentCountPrice -= 500
+							};
+							updateCounter();
+						}
+					});
+				}
+			});
+		}
+	} catch (error) {
+		throw error
+	}
 })

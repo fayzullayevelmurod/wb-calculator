@@ -3,15 +3,20 @@
 @tailwind utilities;
 
 body {
-	@apply font-Inter font-normal text-base leading-6 bg-gray;
+	@apply font-Inter font-normal text-base leading-6 text-dark-2;
 }
 
 .container {
-	@apply max-w-[1424px] mx-auto;
+	@apply max-w-[1280px] mx-auto;
 }
 
-.btn {
+.btn,
+.btn-blue {
 	@apply bg-purple rounded-md px-7 py-[13px] text-white hover:opacity-[75%] duration-200;
+}
+
+.btn-blue {
+	@apply bg-blue;
 }
 
 .btn-outline {
@@ -29,7 +34,12 @@ body {
 }
 
 .copy-btn.active {
-	@apply bg-green-light text-green
+	@apply border-[#DAF8E6] bg-green-light text-green;
+	border: #DAF8E6 !important;
+}
+
+.download-btn:focus {
+	@apply bg-primary text-white hover:opacity-100
 }
 
 .copy-btn:focus svg path,
@@ -66,7 +76,15 @@ body {
 }
 
 .form-input {
-	@apply border-[#DFE4EA] rounded-md px-[20px] py-[11px] outline-none border w-full text-dark placeholder:text-[#9CA3AF];
+	@apply hover:border-[#C4B5FD] focus:border-[#C4B5FD] focus:border-[1.5px] border-[#DFE4EA] rounded-md px-4 py-[10px] outline-none border w-full text-sm placeholder:text-sm text-dark placeholder:text-[#9CA3AF];
+}
+
+.error_input {
+	@apply text-[10px]
+}
+
+.form-input.warning {
+	@apply border-red border-[1.5px]
 }
 
 .form-input:disabled {
@@ -74,7 +92,7 @@ body {
 }
 
 .select-input {
-	@apply absolute bg-[#fff] border-[1.5px] border-[#DFE4EA] text-base rounded-md placeholder:font-normal placeholder:leading-6 top-0 left-0 w-full h-full cursor-pointer px-[20px] py-[11px] placeholder:text-primary outline-none text-dark
+	@apply hover:border-[#C4B5FD] absolute bg-[#fff] border-[1.5px] border-[#DFE4EA] text-base rounded-md placeholder:font-normal placeholder:leading-6 top-0 left-0 w-full h-full cursor-pointer px-[20px] py-[11px] placeholder:text-primary outline-none text-dark
 }
 
 .select-input.error {
@@ -82,9 +100,13 @@ body {
 }
 
 .option {
-	@apply left-0;
+	@apply left-0 duration-200;
 	box-shadow: 0px 1px 3px 0px #A6AFC366;
 }
+
+/* .option.hide {
+	transform: scaleY(0);
+} */
 
 .option-item {
 	@apply relative hover:bg-purple-light
@@ -112,11 +134,15 @@ body {
 }
 
 .sellect-dropdown.active .select-input {
-	@apply border-[#C4B5FD];
+	@apply border-[#C4B5FD] border-[1.5px] placeholder:text-base text-base leading-6;
+}
+
+.form-input:disabled:hover {
+	@apply border-[#DFE4EA] border
 }
 
 .sellect-dropdown::before {
-	@apply content-[url("../images/icons/arrow-down.svg")] z-10 absolute right-[20px] top-[35%] translate-y-[-50%] w-[12px] h-[12px];
+	@apply content-[url("../images/icons/up-bottom-arrow.svg")] z-10 absolute right-[20px] top-[44%] translate-y-[-50%] w-[12px] h-[12px];
 }
 
 .catalog .sellect-dropdown::before {
@@ -127,12 +153,21 @@ body {
 	@apply absolute z-50 top-1/2 -translate-y-1/2 right-[43px] pr-[17px] cursor-pointer border-r border-[#DFE4EA]
 }
 
-/* .sellect-dropdown::after {
-	@apply hidden content-[url("../images/icons/close-icon-two.svg")] absolute top-1/2 -translate-y-1/2 right-[43px] pr-[17px] cursor-pointer border-r border-[#DFE4EA]
-} */
+.circle-icon {
+	animation: fa-spin 1s linear infinite;
+	@apply absolute z-50 top-[33%] -translate-y-1/2 right-[43px];
+}
 
-.sellect-dropdown.active::before {
-	@apply rotate-180 top-[62%]
+@keyframes fa-spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(1turn);
+		transform: rotate(1turn);
+	}
 }
 
 .open-box.active svg {
@@ -145,30 +180,6 @@ body {
 
 .soccial-media:hover svg path {
 	@apply fill-white
-}
-
-footer::before {
-	content: "";
-	position: absolute;
-	bottom: -20%;
-	left: -6%;
-	width: 281px;
-	height: 281px;
-	border-radius: 50%;
-	background: linear-gradient(180deg, rgba(134, 70, 244, 0.08) 0%, rgba(196, 196, 196, 0) 100%);
-	transform: rotate(157deg);
-}
-
-.footer-bottom::before {
-	content: "";
-	position: absolute;
-	top: -30%;
-	right: -6%;
-	width: 309.68px;
-	height: 309.68px;
-	border-radius: 50%;
-	background: linear-gradient(180deg, rgba(151, 71, 255, 0.08) 0%, rgba(196, 196, 196, 0) 100%);
-	transform: rotate(28.73deg);
 }
 
 .menu-btn.active span:first-child {
@@ -195,6 +206,39 @@ header .nav.active {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
 }
+
+/* tabs */
+.tab-content {
+	@apply hidden;
+	animation: fade 0.3s linear;
+}
+
+.tab-item {
+	@apply text-primary;
+}
+
+.tab-item.active {
+	@apply bg-purple text-white;
+}
+
+.tab-item.active.tab-item__blue {
+	@apply bg-blue;
+}
+
+.tab-content.active {
+	@apply block;
+}
+
+@keyframes fade {
+	from {
+		@apply opacity-0
+	}
+
+	to {
+		@apply opacity-100
+	}
+}
+
 
 @media screen and (max-width: 1460px) {
 	.container {
@@ -262,9 +306,23 @@ header .nav.active {
 	}
 }
 
+.reviews-cards {
+	display: flex;
+	flex-wrap: wrap;
+	@apply sm:gap-8 gap-4;
+}
+
+.reviews-cards>div {
+	min-width: 326px;
+}
+
 @media screen and (max-width: 640px) {
 	.form-info {
 		@apply text-xs leading-[20px];
+	}
+
+	.media-btn {
+		@apply px-0 w-[95px] text-center;
 	}
 
 	.form-accordion .form-info {
@@ -277,13 +335,5 @@ header .nav.active {
 
 	.form-section input::placeholder {
 		@apply text-sm leading-[22px];
-	}
-
-	.footer-bottom::before {
-		display: none;
-	}
-
-	footer::before {
-		display: none;
 	}
 }
